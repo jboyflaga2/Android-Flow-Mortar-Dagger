@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Starter Project</string>
+
+    <string name="main_view">Main View</string>
+    <string name="another_view">Another View</string>
+    <string name="get_contact">Get Contact</string>
+    <string name="go_to_another_view">Go To Another View</string>
+    <string name="back">Back</string>
+</resources>
