@@ -19,12 +19,12 @@ import rx.functions.Action0;
 
 @Layout(R.layout.another_view)
 public class AnotherScreen {
-
-    @Singleton
-    @dagger.Component(modules = AndroidModule.class)
-    public interface Component {
-        void inject(AnotherView view);
-    }
+//
+//    @Singleton
+//    @dagger.Component(modules = AndroidModule.class)
+//    public interface Component {
+//        void inject(AnotherView view);
+//    }
 
     @Singleton
     static class Presenter extends ViewPresenter<AnotherView> {

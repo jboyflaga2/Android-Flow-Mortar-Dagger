@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity
     public Object getSystemService(String name) {
         activityScope = MortarScope.findChild(getApplicationContext(), getScopeName());
 
-        AndroidModule androidModule = new AndroidModule();
-        //MainComponent mainComponent = DaggerMainComponent.builder().androidModule(androidModule).build();
-        MainComponent mainComponent = DaggerService.createComponent(MainComponent.class, androidModule);
+        AndroidModule androidModule = new AndroidModule(this, this);
+        MainComponent mainComponent = DaggerMainComponent.builder().androidModule(androidModule).build();
+        //MainComponent mainComponent = DaggerService.createComponent(MainComponent.class, androidModule);
 
         if (activityScope == null) {
             activityScope = MortarScope.buildChild(getApplicationContext())
@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity
 
         BundleServiceRunner.getBundleServiceRunner(this).onCreate(savedInstanceState);
         DaggerService.<MainComponent>getDaggerComponent(this).inject(this);
+
+//        activityResultPresenter.takeView(this);
+//        actionBarOwner.takeView(this);
     }
 
     @Override

@@ -18,15 +18,15 @@ public class MainView extends LinearLayout {
     @Inject
     MainScreen.Presenter presenter;
 
-    private MainScreen.Component component;
+//    private MainScreen.Component component;
 
     public MainView(Context context, AttributeSet attrs) {
         super(context, attrs);
         //DaggerService.<MainScreen.Component>getDaggerComponent(context).inject(this);
-        //DaggerService.<MainComponent>getDaggerComponent(context).inject(this);
+        DaggerService.<MainComponent>getDaggerComponent(context).inject(this);
 
-        this.component = DaggerMainScreen_Component.builder().build();
-        this.component.inject(this);
+//        this.component = DaggerMainScreen_Component.builder().build();
+//        this.component.inject(this);
     }
 
     @Override

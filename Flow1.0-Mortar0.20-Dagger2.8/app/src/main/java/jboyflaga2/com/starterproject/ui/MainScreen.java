@@ -17,18 +17,19 @@ import jboyflaga2.com.starterproject.android.ActivityResultPresenter;
 import jboyflaga2.com.starterproject.android.ActivityResultRegistrar;
 import jboyflaga2.com.starterproject.android.AndroidModule;
 import jboyflaga2.com.starterproject.core.Layout;
+import jboyflaga2.com.starterproject.core.MainComponent;
 import mortar.MortarScope;
 import mortar.ViewPresenter;
 import rx.functions.Action0;
 
 @Layout(R.layout.main_view)
 public class MainScreen {
-
-    @dagger.Component(modules = AndroidModule.class)
-    @Singleton
-    public interface Component {
-        void inject(MainView t);
-    }
+//
+//    @dagger.Component(dependencies = MainComponent.class, modules = AndroidModule.class)
+//    @Singleton
+//    public interface Component {
+//        void inject(MainView t);
+//    }
 
     @Singleton
     static class Presenter extends ViewPresenter<MainView>  implements ActivityResultPresenter.ActivityResultListener {

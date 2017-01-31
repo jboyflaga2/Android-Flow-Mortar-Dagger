@@ -22,15 +22,15 @@ public class AnotherView extends LinearLayout {
     @Inject
     AnotherScreen.Presenter presenter;
 
-    private AnotherScreen.Component component;
+//    private AnotherScreen.Component component;
 
     public AnotherView(Context context, AttributeSet attrs) {
         super(context, attrs);
         //DaggerService.<AnotherScreen.Component>getDaggerComponent(context).inject(this);
-        //DaggerService.<MainComponent>getDaggerComponent(context).inject(this);
+        DaggerService.<MainComponent>getDaggerComponent(context).inject(this);
 
-        this.component = DaggerAnotherScreen_Component.builder().build();
-        this.component.inject(this);
+//        this.component = DaggerAnotherScreen_Component.builder().build();
+//        this.component.inject(this);
     }
 
     @Override
