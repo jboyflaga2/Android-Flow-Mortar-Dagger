@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
     public Object getSystemService(String name) {
         activityScope = MortarScope.findChild(getApplicationContext(), getScopeName());
 
-        AndroidModule androidModule = new AndroidModule(this, this);
+        AndroidModule androidModule = new AndroidModule();
         //MainComponent mainComponent = DaggerMainComponent.builder().androidModule(androidModule).build();
         MainComponent mainComponent = DaggerService.createComponent(MainComponent.class, androidModule);
 

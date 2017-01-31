@@ -24,11 +24,11 @@ import rx.functions.Action0;
 @Layout(R.layout.main_view)
 public class MainScreen {
 
-//    @Singleton
-//    @dagger.Component(modules = AndroidModule.class)
-//    public interface Component {
-//        void inject(MainView t);
-//    }
+    @dagger.Component(modules = AndroidModule.class)
+    @Singleton
+    public interface Component {
+        void inject(MainView t);
+    }
 
     @Singleton
     static class Presenter extends ViewPresenter<MainView>  implements ActivityResultPresenter.ActivityResultListener {

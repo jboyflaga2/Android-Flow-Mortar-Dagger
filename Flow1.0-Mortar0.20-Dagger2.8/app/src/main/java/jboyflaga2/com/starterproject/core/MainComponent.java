@@ -9,7 +9,7 @@ import jboyflaga2.com.starterproject.ui.MainView;
 @dagger.Component(modules = AndroidModule.class)
 @Singleton
 public interface MainComponent {
-    void inject(MainView view);
-    void inject(AnotherView view);
+    //void inject(MainView view);
+    //void inject(AnotherView view);
     void inject(MainActivity mainActivity);
 }

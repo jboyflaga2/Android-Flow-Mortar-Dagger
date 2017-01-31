@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 
 import jboyflaga2.com.starterproject.R;
 import jboyflaga2.com.starterproject.android.ActionBarOwner;
+import jboyflaga2.com.starterproject.android.AndroidModule;
 import jboyflaga2.com.starterproject.core.Layout;
 import mortar.ViewPresenter;
 import rx.functions.Action0;
@@ -19,11 +20,11 @@ import rx.functions.Action0;
 @Layout(R.layout.another_view)
 public class AnotherScreen {
 
-//    @Singleton
-//    @dagger.Component(modules = AndroidModule.class)
-//    public interface Component {
-//        void inject(AnotherView view);
-//    }
+    @Singleton
+    @dagger.Component(modules = AndroidModule.class)
+    public interface Component {
+        void inject(AnotherView view);
+    }
 
     @Singleton
     static class Presenter extends ViewPresenter<AnotherView> {
